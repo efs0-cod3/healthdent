@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTooth } from "react-icons/fa";
 import "./service.css"
-// import { GiTooth } from "react-icons/gi";
+// import { GiTooth, GiAncientScrew } from "react-icons/gi";
 
 
 const  Services = ({style, title}) => {

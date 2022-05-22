@@ -50,19 +50,26 @@ a:focus {
 
 .mail-div span {
     font-size: 1.1rem;
-    border-bottom: solid .3px;
-
-
+    
+    
 }
 
 .mail-div span:hover {
     color: #a3cbcc;
+    border-bottom: solid .3px;
+}
+
+.nav--scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @media all and (max-width: 800px) {
     .sandwish-mobile {
         display: block;
     }
+    
 
     .links {
         margin: 0;
