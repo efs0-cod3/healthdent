@@ -1,0 +1,12 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(163,203,204, 0.5);
+    max-width: 300px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    border: solid 2px rgb(163,203,204);
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+}
