@@ -66,6 +66,8 @@ a:focus {
 }
 
 @media all and (max-width: 800px) {
+
+
     .sandwish-mobile {
         display: block;
     }
@@ -87,6 +89,8 @@ a:focus {
         padding: 10px;
         height: 97vh;
         opacity: 0;
+        z-index: 11;
+
     }
 
     .show {

@@ -6,8 +6,17 @@ import MobileNavBar from './components/navbar';
 import Services from './components/services';
 import NosEncanta from './assets/nos-en.png'
 import CompInput from './components/input';
-import {FormVal, ButtonCentered, Button, SuccessMsj, ErrorMsj } from './elements/form'
+import {  FormVal,
+  ButtonCentered,
+  Button,
+  SuccessMsj,
+  ErrorMsj } from './elements/form'
 import { FaExclamationTriangle} from "react-icons/fa"
+import Carousel from './components/carousel'; 
+import Unid from './assets/unid.png'
+import Equipo from './assets/equipo.png'
+import EquipoFront from './assets/equipofront.png'
+
 
 
 
@@ -16,8 +25,20 @@ const style = {color: '#e9c47c', fontSize: '20px'};
 
 function App() {  
 
-  const [user, changeUser] = useState({field:'', valid: null})
-  const [name, changeName] = useState({field:'', valid: null})
+  const carData = [
+    {
+        image: Unid
+    },
+    {
+        image: Equipo
+    },
+    {
+        image: EquipoFront
+    }
+]
+
+const [name, changeName] = useState({field:'', valid: null})
+  const [interes, changeInteres] = useState({field:'', valid: null})
   const [mail, changeMail] = useState({field:'', valid: null})
   const [phone, changePhone] = useState({field:'', valid: null})
   const [formValid, changeFormValid] = useState(null);
@@ -32,13 +53,11 @@ function App() {
 
   const onSubmit = (e) => {
       e.preventDefault()
-      if( user.valid === 'true' 
-      && name.valid === 'true' 
+      if( name.valid === 'true' 
       && mail.valid === 'true' 
       && phone.valid === 'true' 
     ){
           changeFormValid(true)
-          changeUser({field: '', valid: null})
           changeName({field: '', valid: null})
           changeMail({field: '', valid: null})
           changePhone({field: '', valid: null})
@@ -68,6 +87,12 @@ return (
         <Services style={ style } title='Cirugia Oral'/>
       </section>
 
+
+  <Carousel 
+  img= {carData}
+  slides= {carData} />
+
+
       <section id='contacto'>
         <FormVal action="" onSubmit={onSubmit}>
         <CompInput 
@@ -75,9 +100,19 @@ return (
           changeState={changeName}
           type="text"
           label="Nombre"
-          placeholder="Nombre"
+          placeholder="Juan Pérez"
           errorLeyend="Nombre solo debe contener solo letras y espacios"
           expresionRegular={expresions.name}
+        />
+
+        <CompInput 
+          state={interes}
+          changeState={changeInteres}
+          type="text"
+          label="Interes"
+          placeholder="Cuentanos como podemos ayudarte..."
+          name="interes"
+          errorLeyend="Password should contain 10 - 14 characters"
         />
 
         <CompInput 
@@ -95,12 +130,13 @@ return (
           state={phone}
           changeState={changePhone}
           type="text"
-          label="phone"
+          label="Telefono"
           placeholder="8093421122"
           name="mail"
           errorLeyend="Password should contain 10 - 14 characters"
           expresionRegular={expresions.phone}
         />
+        
 
         {formValid === false && <ErrorMsj>
             <FaExclamationTriangle />

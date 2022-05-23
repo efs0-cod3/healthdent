@@ -14,6 +14,7 @@ const colors = {
 }
 
 const FormVal = styled.form`
+padding: 40px 20px;
 background: ${colors.blueish};
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -27,9 +28,11 @@ gap: 20px;
 const Label = styled.label`
 display:block;
 font-weight:700;
-padding: 10px;
+padding: 10px 10px 0;
 min-height:40px;
 cursor:pointer;
+color: white;
+font-size: 1.4rem;
 
 ${props => props.valid === 'false' && css`
 color: ${colors.error} !important;
@@ -103,18 +106,6 @@ color: ${colors.success};
 
 `;
 
-const TermsContainer = styled.div`
-grid-column: span 2;
-
-input{
-    margin-right: 10px;
-}
-
-@media(max-width: 800px){
-    grid-column: span 1;
-}
-`;
-
 const ButtonCentered = styled.div`
 display: flex;
 flex-direction: column;
@@ -122,6 +113,7 @@ align-items: center;
 grid-column: span 2;
 
 @media(max-width: 800px){
+
     grid-column: span 1;
 }
 `;
@@ -130,7 +122,7 @@ const Button = styled.button`
 height: 45px;
 line-height:45px;
 width: 30%;
-background:#000;
+background: ${colors.hdyellow};
 color:#fff;
 font-weight: bold;
 border: none;
@@ -141,6 +133,7 @@ transition: .1s ease all;
     &:hover{
         box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
     }
+    
 `;
 
 const SuccessMsj = styled.p`
@@ -161,9 +154,8 @@ grid-column: span 2;
 p{
     margin: 0;
 }
-b {
+b{
     margin-left:10px; 
-
 }
 `;
 
@@ -174,9 +166,8 @@ export {
     Input,
     ErrorLeyend,
     IconValidation,
-    TermsContainer,
     ButtonCentered,
     Button,
     SuccessMsj,
-    ErrorMsj,
+    ErrorMsj
 }
