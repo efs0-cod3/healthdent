@@ -32,7 +32,7 @@ const MobileNavBar = ({src,style,}) => {
 // navbar on scrolling
     
   return (
-    <header onScroll={ scroll } className= {scroll}>
+    <header onScroll={ stickNavbar } className= {scroll}>
     <nav>
         <div onClick= { ToggleShow } className='sandwish-mobile' >
           <FaBars style={ style } className={ active }  />

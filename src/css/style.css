@@ -33,7 +33,6 @@
     right: 32px;
     font-size: 3rem;
     color: var(--hdyellow);
-    z-index: 10;
     cursor: pointer;
     user-select: none;
 }
@@ -44,7 +43,6 @@
     left: 32px;
     font-size: 3rem;
     color: var(--hdyellow);
-    z-index: 10;
     cursor: pointer;
     user-select: none;
 }
@@ -79,6 +77,8 @@ header {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 0 10px .5px rgba(0, 0, 0, .1);
     background-color: white;
+    position: relative;
+        z-index: 1;
 }
 
 nav {
@@ -141,6 +141,7 @@ main {
 @media all and (max-width: 800px) {
     header {
         padding: 10px 40px;
+        
     }
 
     .slider {
@@ -174,5 +175,8 @@ main {
         width: 200px;
         height: 200px;
     }
-
+.contacto{
+    position: relative;
+    z-index: 0;
+}
 }

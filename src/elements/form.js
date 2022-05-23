@@ -103,7 +103,6 @@ ${props => props.valid === 'true' && css`
 opacity:1;
 color: ${colors.success};
 ` }
-
 `;
 
 const ButtonCentered = styled.div`
