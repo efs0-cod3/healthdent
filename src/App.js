@@ -93,7 +93,7 @@ return (
   slides= {carData} />
 
 
-      <section id='contacto'>
+      <section className='contacto' id='contacto'>
         <FormVal action="" onSubmit={onSubmit}>
         <CompInput 
           state={name}
