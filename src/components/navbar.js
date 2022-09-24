@@ -48,7 +48,7 @@ const MobileNavBar = ({src,style,}) => {
         <li onClick= { ToggleShow } className="link"><a href='#contacto'>Contacto</a></li>
       </ul>
       <div className="mail-div">
-        <p className="mail" >staff.healthdent@gmail.com</p>
+        <a href="mailto:staff.healthdent@gmail.com?subject=Agendar cita" className="mail">staff.healthdent@gmail.com</a><br/>
         <span>Escribenos</span>
       </div>
       <div className='phone'>

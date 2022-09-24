@@ -14,7 +14,7 @@ const colors = {
 }
 
 const FormVal = styled.form`
-padding: 40px 20px;
+padding: 40px 100px;
 background: ${colors.blueish};
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -56,7 +56,7 @@ transition: .3 ease all;
 border: 3px solid transparent;
 
 &:focus {
-    border: 3px solid ${colors.border};
+    border: 3px solid ${colors.hdyellow};
     outline: none;
     box-shadow: 3px 0 30px rgba(163,163,163, 0.4)
 }

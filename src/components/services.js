@@ -4,13 +4,17 @@ import "./service.css"
 // import { GiTooth, GiAncientScrew } from "react-icons/gi";
 
 
-const  Services = ({style, title}) => {
+const  Services = ({style, service, description}) => {
 
 return (
     <div className="card">
-    <FaTooth style={style}/>
-    <h1>{title}</h1>
-    <p>Some text about the jeans..</p>
+   <div>
+   <FaTooth style={style}/>
+   </div>
+    <div className="card-text">
+    <h1>{service}</h1>
+    <p>{description}</p>
+    </div>
     </div> 
 )
 

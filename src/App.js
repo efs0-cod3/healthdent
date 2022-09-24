@@ -79,12 +79,12 @@ return (
       </main>
 
       <section className='services' id='servicios'>
-        <Services style={ style } title='Endodoncia'/>
-        <Services style={ style } title='Rehabilitacion Bucal y Estetica'/>
-        <Services style={ style } title='Periodoncia'/>
-        <Services style={ style } title='Implantes Dentales'/>
-        <Services style={ style } title='Odontologia General'/>
-        <Services style={ style } title='Cirugia Oral'/>
+        <Services style={ style } service='Endodoncía' description='Procedimiento que tiene como finalidad preservar las piezas dentales dañadas, evitando así su pérdida.' />
+        <Services style={ style } service='Rehabilitación Bucal y Estetica' description='Nos encargamos de restaurar, devolver la función estética y armonía oral mediante diversos procedimientos como prótesis dentales, entre otros.'/>
+        <Services style={ style } service='Periodoncia' description='Tratamos las enfermedades de las encías y del hueso que sostiene los dientes.'/>
+        <Services style={ style } service='Implantes Dentales' description='Colocamos pernos metalicos quirúrgicamente en los huesos maxilares, debajo de las encías, y sobre ellos colocamos piezas o puentes fijos que reemplazaran las piezas perdidas.'/>
+        <Services style={ style } service='Odontología General' description='Nos encargamos de solucionar los problemas más comunes que aparecen en el día a día en su boca.'/>
+        <Services style={ style } service='Cirugía Oral' description='Realizamos cualquier procedimiento quirúrgico en la boca y la mandíbula o alrededor de estas'/>
       </section>
 
 

@@ -42,10 +42,10 @@ a:focus {
 .mail-div {
     color: #e9c47c;
     font-size: 1.3rem;
-    cursor: pointer;
 }
 
 .mail {
+    cursor: pointer;
     margin: 0;
 }
 

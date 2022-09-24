@@ -30,7 +30,7 @@
 .right-arrow {
     position: absolute;
     top: 50%;
-    right: 32px;
+    right: 200px;
     font-size: 3rem;
     color: var(--hdyellow);
     cursor: pointer;
@@ -40,7 +40,7 @@
 .left-arrow {
     position: absolute;
     top: 50%;
-    left: 32px;
+    left: 200px;
     font-size: 3rem;
     color: var(--hdyellow);
     cursor: pointer;
@@ -49,14 +49,13 @@
 
 .slide {
     opacity: 0;
-    transition: all 1s ease;
-    display: none;
+    transition: all .5s ease-out;
 }
 
 .slide.front {
     opacity: 1;
-    transition: 1s;
-    transform: scale(1.02);
+    transform: scale(1.1);
+    transition: all .5s ease-in;
     display: block;
 }
 
