@@ -2,6 +2,10 @@
     display: none;
 }
 
+.links-div{
+    margin-left: auto;
+}
+
 .links {
     margin: 0;
     top: 40px;
@@ -12,6 +16,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    padding-left: 0;
+
 }
 
 
@@ -42,6 +48,7 @@ a:focus {
 .mail-div {
     color: #e9c47c;
     font-size: 1.3rem;
+    margin-left: auto;
 }
 
 .mail {
@@ -66,8 +73,21 @@ a:focus {
     left: 0;
 }
 
-@media all and (max-width: 800px) {
+a.aphone{
+    display: none;
+}
 
+@media all and (max-width: 800px) {
+.logo-div{
+    margin-left: auto;
+}
+
+    a.aphone{
+     display: block;
+    }
+    a.aphone:hover{
+        border: none;
+    }
 
     .sandwish-mobile {
         display: block;
@@ -84,18 +104,19 @@ a:focus {
         font-size: 1.4rem;
         position: fixed;
         top: 5rem;
-        transform: translateX(-200px);
-        transition: all ease-in-out .6s .1s;
         background-color: white;
         padding: 10px;
         height: 97vh;
         opacity: 0;
+        width: 150px;
+        left: -200px;
+        transition: all ease-in-out .6s .1s;
     }
 
     .show {
         transition: all ease-in-out .6s .2s;
         opacity: 1;
-        transform: translateX(-40px);
+        left: 0;
         z-index: 1;
     }
 

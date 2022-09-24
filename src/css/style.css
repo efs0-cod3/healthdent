@@ -1,181 +1,273 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
 
 :root {
-    --hdyellow: #e9c47c;
-    --blueish: #a3cbcc;
-    --hdgrey: #8a877f;
-    --hdlightgrey: #CDCBC3;
+  --hdyellow: #e9c47c;
+  --blueish: #a3cbcc;
+  --hdgrey: #8a877f;
+  --hdlightgrey: #cdcbc3;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .images {
-    width: 500px;
-    height: 330px;
-    border-radius: 8px;
-
+  width: 500px;
+  height: 330px;
+  border-radius: 8px;
 }
 
 .slider {
-    padding: 40px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  padding: 80px 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 200px;
-    font-size: 3rem;
-    color: var(--hdyellow);
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 3rem;
+  color: var(--hdyellow);
+  cursor: pointer;
+  user-select: none;
 }
 
 .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 200px;
-    font-size: 3rem;
-    color: var(--hdyellow);
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-size: 3rem;
+  color: var(--hdyellow);
+  cursor: pointer;
+  user-select: none;
 }
 
 .slide {
-    opacity: 0;
-    transition: all .5s ease-out;
+  opacity: 0;
+  transition: all 0.5s ease-out;
 }
 
 .slide.front {
-    opacity: 1;
-    transform: scale(1.1);
-    transition: all .5s ease-in;
-    display: block;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in;
+  display: block;
 }
 
-
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Comfortaa', cursive;
-    margin: 0;
+  font-family: "Comfortaa", cursive;
+  margin: 0;
 }
 
 header {
-    width: 100%;
-    padding: 10px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 0 0 10px .5px rgba(0, 0, 0, .1);
-    background-color: white;
-    position: relative;
-        z-index: 1;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 0.5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  z-index: 1;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 input::placeholder {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
 .times {
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .bars {
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .active {
-    display: none;
-
+  display: none;
 }
 
 main {
-    background-color: var(--blueish);
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    gap: 10rem;
+  background-color: var(--blueish);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 10rem;
+  justify-content: center;
 }
 
 .encanta {
-    width: 50vw;
+  width: 50vw;
 }
 
 .about {
-
-    color: white;
-    font-size: 2.5rem;
-    width: 400px;
+  color: white;
+  font-size: 2.5rem;
+  width: 400px;
 }
 
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 80px 20px;
+  gap: 3rem;
+  background-color: var(--hdyellow);
+  position: relative;
 }
 
+/* divider  servicios*/
+.custom-shape-divider-top-1664034511 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1664034511 svg {
+  position: relative;
+  display: block;
+  width: calc(152% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-top-1664034511 .shape-fill {
+  fill: var(--blueish);
+}
+/* divider */
+
+/* slider divider */
+/* top */
+.custom-shape-divider-top-1664033787 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1664033787 svg {
+  position: relative;
+  display: block;
+  width: calc(152% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-top-1664033787 .shape-fill {
+  fill: #e9c47c;
+}
+
+/* bottom */
+.custom-shape-divider-bottom-1664034752 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1664034752 svg {
+  position: relative;
+  display: block;
+  width: calc(152% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-bottom-1664034752 .shape-fill {
+  fill: var(--blueish);
+}
+/* slider divider */
+
+footer {
+    width: 100%;
+    background: var(--hdgrey);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blueish);
+
+}
+
+.socials_hd {
+    text-align: center;
+}
+
+.s_icons {
+    font-size: 30px;
+    margin: 5px;
+}
+
+footer a{
+    color: var(--blueish);
+}
+
+footer a:hover{
+    color: var(--hdyellow);
+}
 
 @media all and (max-width: 800px) {
-    header {
-        padding: 10px 40px;
-        
-    }
+  header {
+    padding: 10px 40px;
+  }
 
-    .slider {
-        width: 100vw;
-    }
+  .slider {
+    padding: 100px 40px;
+    width: 100vw;
+  }
 
-    main {
-        text-align: center;
-        padding: 20px;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100vw;
-    }
+  main {
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100vw;
+  }
 
-    .about {
-        color: white;
-        font-size: 1.5rem;
-        width: 325px;
-    }
+  .about {
+    color: white;
+    font-size: 1.5rem;
+    width: 325px;
+  }
 
-    .encanta {
-        width: 80vw;
-        margin: 30px 0;
-    }
+  .encanta {
+    width: 80vw;
+    margin: 30px 0;
+  }
 
-    .nav--scrolled {
-        position: fixed;
-    }
+  .nav--scrolled {
+    position: fixed;
+  }
 
-    .images {
-        width: 200px;
-        height: 200px;
-    }
-.contacto{
+  .images {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contacto {
     position: relative;
     z-index: 0;
-}
+  }
 }

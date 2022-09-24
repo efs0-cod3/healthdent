@@ -38,21 +38,24 @@ const MobileNavBar = ({src,style,}) => {
           <FaBars style={ style } className={ active }  />
           <FaTimes style={ style } className={ toggleIcon } />
         </div>
-      <div>
+      <div className="logo-div">
       <img src={src} alt='logo' className='logo'/>
       </div>
+      <div className="links-div">
       <ul className={navLink}>
         <li onClick= { ToggleShow } className="link"><a href='#nosotros'>Quienes somos?</a></li>
         <li onClick= { ToggleShow } className="link"><a href='#servicios'>Servicios</a></li>
         <li onClick= { ToggleShow } className="link"><a href='#instalaciones'>Instalaciones</a></li>
         <li onClick= { ToggleShow } className="link"><a href='#contacto'>Contacto</a></li>
       </ul>
+      </div>
       <div className="mail-div">
         <a href="mailto:staff.healthdent@gmail.com?subject=Agendar cita" className="mail">staff.healthdent@gmail.com</a><br/>
         <span>Escribenos</span>
       </div>
       <div className='phone'>
-      <FaPhoneAlt style={{color: '#e9c47c', fontSize: '20px'}} className='phone' />
+        {/* check phone */}
+      <a className="aphone" href="tel:8096362876"><FaPhoneAlt style={{color: '#e9c47c', fontSize: '20px'}} className='phone' /></a>
       </div>
       </nav>
       </header>
