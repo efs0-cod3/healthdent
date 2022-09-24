@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/healthdent/static/css/main.c0a7c692.css",
+    "main.css": "/healthdent/static/css/main.ccfe115d.css",
     "main.js": "/healthdent/static/js/main.71c168d5.js",
     "static/media/equipo.png": "/healthdent/static/media/equipo.5a16693b299a7f88d7ff.png",
     "static/media/equipofront.png": "/healthdent/static/media/equipofront.5850b8a79da32b0bd5a8.png",
@@ -8,11 +8,11 @@
     "static/media/nos-en.png": "/healthdent/static/media/nos-en.d2021ae8cec96d9d777f.png",
     "static/media/healthDent.png": "/healthdent/static/media/healthDent.30d1b294b97e9513df9b.png",
     "index.html": "/healthdent/index.html",
-    "main.c0a7c692.css.map": "/healthdent/static/css/main.c0a7c692.css.map",
+    "main.ccfe115d.css.map": "/healthdent/static/css/main.ccfe115d.css.map",
     "main.71c168d5.js.map": "/healthdent/static/js/main.71c168d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0a7c692.css",
+    "static/css/main.ccfe115d.css",
     "static/js/main.71c168d5.js"
   ]
 }
