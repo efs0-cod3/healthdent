@@ -9,10 +9,11 @@ import {
   FormVal,
   ButtonCentered,
   Button,
-  SuccessMsj,
-  ErrorMsj,
+  // SuccessMsj,
+  // ErrorMsj,
+  // FaExclamationTriangle
 } from "./elements/form";
-import { FaExclamationTriangle, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 import Carousel from "./components/carousel";
 import Unid from "./assets/unid.png";
 import Equipo from "./assets/equipo.png";
@@ -34,10 +35,10 @@ function App() {
   ];
 
   const [name, changeName] = useState({ field: "", valid: null });
-  const [interes, changeInteres] = useState({ field: "", valid: null });
+  const [interes, changeInterest] = useState({ field: "", valid: null });
   const [mail, changeMail] = useState({ field: "", valid: null });
   const [phone, changePhone] = useState({ field: "", valid: null });
-  const [formValid, changeFormValid] = useState(null);
+  // const [formValid, changeFormValid] = useState(null);
 
   const expresions = {
     user: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -46,21 +47,38 @@ function App() {
     phone: /^\d{10,14}$/, // 7 a 14 numeros.
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (
-      name.valid === "true" &&
-      mail.valid === "true" &&
-      phone.valid === "true"
-    ) {
-      changeFormValid(true);
-      changeName({ field: "", valid: null });
-      changeMail({ field: "", valid: null });
-      changePhone({ field: "", valid: null });
-    } else {
-      changeFormValid(false);
-    }
-  };
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //       .join("&");
+  // }
+
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (
+  //     name.valid === "true" &&
+  //     mail.valid === "true" &&
+  //     phone.valid === "true"
+  //   ) {
+  //     changeFormValid(true);
+  //     changeName({ field: "", valid: null });
+  //     changeMail({ field: "", valid: null });
+  //     changePhone({ field: "", valid: null });
+  //     changeInterest({ field: "", valid: null });
+
+  //     fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: encode({ "form-name": "contact", ...this.state })
+  //     })
+  //       .then(() => alert("Success!"))
+  //       .catch(error => alert(error));
+
+
+  //   } else {
+  //     changeFormValid(false);
+  //   }
+  // };
 
   return (
     <div className="App">
@@ -73,7 +91,7 @@ function App() {
         />
         <article className="about">
           <p>
-            Con mas de 10 años trabajando para el cuidado tu salud e higiene
+            Con mas de 10 años trabajando para el cuidado de tu salud e higiene
             bucal, verte sonreir es nuestra meta y queremos brindarte nuestros
             servicios para que lo hagas toda confianza.
           </p>
@@ -97,7 +115,7 @@ function App() {
 
         <Services
           style={style}
-          service="Endodoncía"
+          service="Endodoncia"
           description="Procedimiento que tiene como finalidad preservar las piezas dentales dañadas, evitando así su pérdida."
         />
         <Services
@@ -130,11 +148,13 @@ function App() {
       <Carousel img={carData} slides={carData} />
 
       <section className="contacto" id="contacto">
-        <FormVal action="" onSubmit={onSubmit}>
+        <FormVal name="contact" method="post" onSubmit="submit">
+        <input type="hidden" name="form-name" value="contact" />
           <CompInput
             state={name}
             changeState={changeName}
             type="text"
+            name="nombre"
             label="Nombre"
             placeholder="Juan Pérez"
             errorLeyend="Nombre solo debe contener solo letras y espacios"
@@ -143,7 +163,7 @@ function App() {
 
           <CompInput
             state={interes}
-            changeState={changeInteres}
+            changeState={changeInterest}
             type="text"
             label="Interes"
             placeholder="Cuentanos como podemos ayudarte..."
@@ -168,38 +188,38 @@ function App() {
             type="text"
             label="Telefono"
             placeholder="8093421122"
-            name="mail"
+            name="telefono"
             errorLeyend="Password should contain 10 - 14 characters"
             expresionRegular={expresions.phone}
           />
 
-          {formValid === false && (
+          {/* {formValid === false && (
             <ErrorMsj>
               <FaExclamationTriangle />
               <p>
                 <b>Error:</b> Por favor rellena el formulario correctamente.
               </p>
             </ErrorMsj>
-          )}
+          )} */}
 
           <ButtonCentered>
             <Button type="submit">Enviar</Button>
-            {formValid === true && (
+            {/* {formValid === true && (
               <SuccessMsj>Formulario enviado exitosamente!</SuccessMsj>
-            )}
+            )} */}
           </ButtonCentered>
         </FormVal>
       </section>
       <footer> 
-      <section className="socials">
-              <div className="socials_hd">
-                <a href="https://www.instagram.com/healthdentrd/" target="_blank" rel="noreferrer"><FaInstagram className=" s_icons"/></a>
-                <a href="https://www.facebook.com/healthdentrd/" target="_blank" rel="noreferrer"><FaFacebook className=" s_icons"/></a>
-              </div>
-              <div>
-                <h2 className="h2footer">&copy; 2022, HealthDentrd</h2>
-              </div>
-      </section>
+        <section className="socials">
+          <div className="socials_hd">
+            <a href="https://www.instagram.com/healthdentrd/" target="_blank" rel="noreferrer"><FaInstagram className=" s_icons"/></a>
+            <a href="https://www.facebook.com/healthdentrd/" target="_blank" rel="noreferrer"><FaFacebook className=" s_icons"/></a>
+          </div>
+          <div>
+            <h2 className="h2footer">&copy; 2022, HealthDentrd</h2>
+          </div>
+        </section>
       </footer> 
     </div>
   );
