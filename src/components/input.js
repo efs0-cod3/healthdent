@@ -26,7 +26,7 @@ const CompInput = ({state, changeState, type, label, placeholder,  name, errorLe
         <div>
             <Label htmlFor={name} valid={state.valid}>{label} </Label> 
                <GroupInput>
-                    <Input type = {type} placeholder = {placeholder} id={name} value={state.field} onChange={onChange} onKeyUp={validation} onBlur={validation} valid={state.valid}/>
+                    <Input type = {type} placeholder = {placeholder} id={name} name={name} value={state.field} onChange={onChange} onKeyUp={validation} onBlur={validation} valid={state.valid}/>
                     <IconValidation
                      icon={state.valid ===  'true' ? FaCheckCircle : FaTimesCircle} 
                      valid={state.valid}/>

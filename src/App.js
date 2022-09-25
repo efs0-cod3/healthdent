@@ -148,14 +148,14 @@ function App() {
       <Carousel img={carData} slides={carData} />
 
       <section className="contacto" id="contacto">
-        <FormVal name="contact" method="post" onSubmit="submit">
+        <FormVal name="contact" method="post">
         <input type="hidden" name="form-name" value="contact" />
           <CompInput
             state={name}
             changeState={changeName}
             type="text"
-            name="nombre"
             label="Nombre"
+            name="nombre"
             placeholder="Juan Pérez"
             errorLeyend="Nombre solo debe contener solo letras y espacios"
             expresionRegular={expresions.name}
@@ -165,10 +165,10 @@ function App() {
             state={interes}
             changeState={changeInterest}
             type="text"
-            label="Interes"
+            label="Mensaje"
+            name="message"
             placeholder="Cuentanos como podemos ayudarte..."
-            name="interes"
-            errorLeyend="Password should contain 10 - 14 characters"
+            errorLeyend="texto libre"
           />
 
           <CompInput
@@ -176,9 +176,9 @@ function App() {
             changeState={changeMail}
             type="email"
             label="E-mail"
+            name="email"
             placeholder="Jhon@mail.com"
-            name="mail"
-            errorLeyend="Mail should contain only letters, points, numbers, - and _"
+            errorLeyend="Email solo debe contener letras, puntos, numeros, - y  _"
             expresionRegular={expresions.mail}
           />
 
@@ -186,10 +186,10 @@ function App() {
             state={phone}
             changeState={changePhone}
             type="text"
+            name="telefono"
             label="Telefono"
             placeholder="8093421122"
-            name="telefono"
-            errorLeyend="Password should contain 10 - 14 characters"
+            errorLeyend="Telefono solo puede contener 10 - 14 caracteres"
             expresionRegular={expresions.phone}
           />
 
